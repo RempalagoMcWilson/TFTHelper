@@ -1,5 +1,6 @@
 package view.mainframe;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -21,8 +22,8 @@ public class UnitIcon extends JPanel{
 		iniGUI();
 	}
 	private void iniGUI() {
-		this.setMaximumSize(new Dimension(49, 49));
-		this.setLayout(null);
+		this.setMinimumSize(new Dimension(49, 49));
+		//this.setLayout(null);
 		ImageIcon img = null;
         Image image = null;
         try {
@@ -30,8 +31,8 @@ public class UnitIcon extends JPanel{
             image = myPicture;
             img = new ImageIcon(image.getScaledInstance(45, 45, Image.SCALE_SMOOTH));
             icon = new JLabel(img);
-            icon.setBounds(2, 2, 45, 45);
-            add(icon);
+            icon.setMinimumSize(new Dimension(45, 45));
+            add(icon, BorderLayout.CENTER);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

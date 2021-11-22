@@ -28,6 +28,7 @@ public class IniFrame extends JFrame{
 	}
 	
 	private void iniGUI() {
+		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		setSize(new Dimension(500,300));
 		setLayout (new BorderLayout());
 		this.setResizable(false);
@@ -43,6 +44,10 @@ public class IniFrame extends JFrame{
 		add(summonersTA, BorderLayout.CENTER);
 		this.setVisible(true);
 		
+		
+	}
+	private void cierra() {
+		this.dispose();
 	}
 	
 	private void okBListener() {
@@ -65,6 +70,7 @@ public class IniFrame extends JFrame{
             		JOptionPane.showMessageDialog(null, "El numero de rivales debe de ser 7", "Error message", JOptionPane.ERROR_MESSAGE);
             	}*/
             	ctrl.meteSummoners(nombresSummoners);
+            	cierra();
             }
         });
 	}

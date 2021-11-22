@@ -15,10 +15,13 @@ public class Solution {
 		units = new ArrayList<String>();
 		try {
 			name = (String) j.get("name");
+			//System.out.println(name);
 			JSONArray jUA = (JSONArray) j.get("units");
-    		Iterator<String> iteratorU = jUA.iterator();
+			//System.out.println(jUA);
+    		Iterator<JSONObject> iteratorU = jUA.iterator();
     		while (iteratorU.hasNext()) {
-    			units.add((String) iteratorU.next());
+    			JSONObject jU = (JSONObject) iteratorU.next();
+    			units.add((String)jU.get("character_id"));
     		}
 		}
 		catch(Exception e) {
