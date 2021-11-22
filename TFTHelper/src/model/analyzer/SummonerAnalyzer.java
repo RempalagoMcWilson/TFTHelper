@@ -20,14 +20,13 @@ public class SummonerAnalyzer {
 	private double avgTotal_damage_to_players;
 
 	public SummonerAnalyzer(Summoner s) {
-
 		analyzeSummoner(s);
 	}
 	
 	
 
 	public void analyzeSummoner(Summoner s) {
-		avgUnitList = new ArrayList();
+		avgUnitList = new ArrayList<String>();
 
 		PriorityQueue<UnidadAux> pQ = new PriorityQueue<UnidadAux>(1, new Comparator<UnidadAux>(){
 			@Override
@@ -67,8 +66,7 @@ public class SummonerAnalyzer {
 							 uA.sumaCont();
 							 pQ.offer(uA);
 							 break;
-						 }
-						 
+						 }				 
 					 }
 				}
 			}
@@ -76,7 +74,6 @@ public class SummonerAnalyzer {
 		
 		for(int i = 0; i < 8;i++) {
 			UnidadAux auxiliarU = pQ.poll();
-			System.out.println(auxiliarU.getsE().getKey() + " " + auxiliarU.getsE().getValue());
 			avgUnitList.add(auxiliarU.getsE().getKey());
 		}
 		avgGold_left = sumGold_left / contNumPartida;

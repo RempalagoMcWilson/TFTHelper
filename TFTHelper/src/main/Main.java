@@ -1,14 +1,19 @@
 package main;
 
 
+import com.formdev.flatlaf.FlatDarkLaf;
 
-import model.Summoner;
+import controller.Controller;
+import view.iniFrame.IniFrame;
+//import model.Summoner;
 
 public class Main {
 
     public static void main(String[] args) {
-        Summoner lenguaSalvaje = new Summoner("LenguaSalvaje");
-        System.out.println(lenguaSalvaje.toString());
+    	FlatDarkLaf.setup();
+    	 new IniFrame(new Controller()).setVisible(true);
+        //Summoner lenguaSalvaje = new Summoner("LenguaSalvaje");
+        //System.out.println(lenguaSalvaje.toString());
     }
     /*
      * String apiKey = "RGAPI-9cb5ac55-80eb-4a8e-aba6-fac16e41b07e";

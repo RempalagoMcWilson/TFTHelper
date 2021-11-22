@@ -1,0 +1,33 @@
+{
+	"solutions": [
+		{
+			"name": "Academy Assassins",
+			"units": [
+				{
+					"character_id": "TFT6_Twitch"
+				},
+				{
+					"character_id": "TFT6_Blitzcrank"
+				},
+				{
+					"character_id": "TFT6_Katarina"
+				},
+				{
+					"character_id": "TFT6_Talon"
+				},
+				{
+					"character_id": "TFT6_Ekko"
+				},
+				{
+					"character_id": "TFT6_Leona"
+				},
+				{
+					"character_id": "TFT6_Shaco"
+				},
+				{
+					"character_id": "TFT6_Akali"
+				}
+			]
+		}
+	]
+}

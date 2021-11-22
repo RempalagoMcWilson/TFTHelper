@@ -38,6 +38,7 @@ public class QueryTFTSummoner implements Query {
 			}
 
 		} catch (Exception e) {
+			
 			e.printStackTrace();
 		}
 		return data_obj;
