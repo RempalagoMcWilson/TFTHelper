@@ -1,16 +1,17 @@
 package main;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Scanner;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+
+
+import model.Summoner;
 
 public class Main {
 
     public static void main(String[] args) {
-        String apiKey = "RGAPI-9cb5ac55-80eb-4a8e-aba6-fac16e41b07e";
+        Summoner lenguaSalvaje = new Summoner("LenguaSalvaje");
+        System.out.println(lenguaSalvaje.toString());
+    }
+    /*
+     * String apiKey = "RGAPI-9cb5ac55-80eb-4a8e-aba6-fac16e41b07e";
         String summonerNameQuery = "https://euw1.api.riotgames.com/tft/summoner/v1/summoners/by-name/";
         String summonerName = "LenguaSalvaje";
         String query = "";
@@ -70,10 +71,10 @@ public class Main {
                         System.out.println("Total Recovered: " + new_obj.get("TotalRecovered"));
                         break;
                     }
-                }*/
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+     */
 }
