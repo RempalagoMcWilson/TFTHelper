@@ -6,19 +6,6 @@ import java.util.List;
 import org.json.simple.JSONObject;
 
 public class Unit {
-	/*
-	 *  {
-                        "character_id": "TFT6_Singed",
-                        "items": [
-                            77,
-                            56,
-                            55
-                        ],
-                        "name": "",
-                        "rarity": 0,
-                        "tier": 3
-                    },
-	 */
 	private String character_id;
 	private List<Long> items;
 	private String name;

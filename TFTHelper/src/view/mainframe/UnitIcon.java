@@ -17,24 +17,35 @@ public class UnitIcon extends JPanel{
 	private String character_id;
 	private JLabel icon;
 	
-	public UnitIcon(String character_id) {
+	public UnitIcon(String character_id,boolean jugador) {
 		this.character_id = character_id;
-		iniGUI();
+		iniGUI(jugador);
 	}
-	private void iniGUI() {
-		this.setMinimumSize(new Dimension(49, 49));
-		//this.setLayout(null);
+	private void iniGUI(boolean jugador) {
+		if(jugador)
+			setMinimumSize(new Dimension(59, 59));
+		else
+			this.setMinimumSize(new Dimension(49, 49));
 		ImageIcon img = null;
         Image image = null;
         try {
             BufferedImage myPicture = ImageIO.read(new File("resources/unitIcon/"+ character_id + ".png"));
             image = myPicture;
-            img = new ImageIcon(image.getScaledInstance(45, 45, Image.SCALE_SMOOTH));
+            if(jugador)
+            	img = new ImageIcon(image.getScaledInstance(55, 55, Image.SCALE_SMOOTH));
+    		else
+    			img = new ImageIcon(image.getScaledInstance(45, 45, Image.SCALE_SMOOTH));
+            
             icon = new JLabel(img);
-            icon.setMinimumSize(new Dimension(45, 45));
+            if(jugador)
+            	icon.setMinimumSize(new Dimension(55, 55));
+    		else
+    			icon.setMinimumSize(new Dimension(45, 45));
+            
             add(icon, BorderLayout.CENTER);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage() + " " + character_id);
         }
+        this.setToolTipText(character_id);
 	}
 }

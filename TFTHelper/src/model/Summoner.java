@@ -28,7 +28,7 @@ public class Summoner {
     	iniSummoner(name);
     }
     private void iniSummoner(String name) {
-    	matchList = new ArrayList();
+    	matchList = new ArrayList<Match>();
     	Query qS= new QueryTFTSummoner();
     	Query qL= new QueryListMatch();
     	Query qM= new QueryMatch();
@@ -84,7 +84,11 @@ public class Summoner {
 	}
 	public long getSummonerLevel() {
 		return summonerLevel;
-	}/*
+	}
+	public SummonerAnalyzer getSA() {
+		return sA;
+	}
+	/*
 	public void setMatchList(ArrayList<Match> matchList) {
 		this.matchList = matchList;
 	}

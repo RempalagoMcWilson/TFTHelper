@@ -24,24 +24,21 @@ public class SolucionPanel extends JPanel{
 		iniGUI(s);
 	}
 	
-	private void iniGUI(Solution s) {//label.setFont(new Font("Calibri", Font.BOLD, 20));
+	private void iniGUI(Solution s) {
 		iconos = new ArrayList<UnitIcon>();
 		this.setLayout(new BorderLayout());
-		this.setMinimumSize(new Dimension(1000,200));
-		this.setMaximumSize(new Dimension(1000,200));
 		infoLabel = new JLabel();
 		nombreLabel = new JLabel();
-		//infoLabel.setMinimumSize(new Dimension(1000,20));
 		infoLabel.setText("En esta partida debe de jugar ");
 		
 		nombreLabel.setText("" + s.getName());
-		nombreLabel.setFont(new Font("",Font.BOLD, 15));
+		nombreLabel.setFont(new Font("",Font.BOLD, 20));
 		panelIconos =new JPanel();
 		panelLabels = new JPanel();
 		panelLabels.setLayout(new BorderLayout());
 		panelIconos.setLayout(new GridLayout (1,8));
 		for(String nIconos : s.getUnits()) {
-			iconos.add(new UnitIcon(nIconos));
+			iconos.add(new UnitIcon(nIconos,false));
 		}
 		for(UnitIcon nI :iconos) {
 			panelIconos.add(nI);

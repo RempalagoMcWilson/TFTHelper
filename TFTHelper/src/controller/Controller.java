@@ -45,15 +45,11 @@ public class Controller {
 	}
 
 	public void meteSummoners(ArrayList<String> nombresSummoners) {
-		/*summonersList = new ArrayList<Summoner>();
+		summonersList = new ArrayList<Summoner>();
 		for(String n: nombresSummoners) {
 			summonersList.add(new Summoner(n));
 		}
-		for(Summoner s : summonersList) {
-			System.out.println(s);
-		}*/
-		
-		new MainFrame(solutionsList.get(0));
+		new MainFrame(solutionsList.get(0),summonersList);
 	}
 
 }

@@ -139,6 +139,47 @@ public class SummonerAnalyzer {
 				+ ",\n avgPlayers_eliminated=" + avgPlayers_eliminated + ",\n avgTotal_damage_to_players="
 				+ avgTotal_damage_to_players + "]";
 	}
-	
+
+
+
+	public List<String> getAvgUnitList() {
+		return avgUnitList;
+	}
+
+
+
+	public double getAvgGold_left() {
+		return avgGold_left;
+	}
+
+
+
+	public double getAvgLast_round() {
+		return avgLast_round;
+	}
+
+
+
+	public double getAvgLevel() {
+		return avgLevel;
+	}
+
+
+
+	public double getAvgPlacement() {
+		return avgPlacement;
+	}
+
+
+
+	public double getAvgPlayers_eliminated() {
+		return avgPlayers_eliminated;
+	}
+
+
+
+	public double getAvgTotal_damage_to_players() {
+		return avgTotal_damage_to_players;
+	}
 	
 }
