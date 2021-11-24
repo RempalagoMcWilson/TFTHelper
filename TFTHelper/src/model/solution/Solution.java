@@ -8,10 +8,12 @@ import org.json.simple.JSONObject;
 
 public class Solution {
 
-	String name;
-	ArrayList<String> units;
+	private String name;
+	private ArrayList<String> units;
+	private int numCoin;
 	
 	public Solution(JSONObject j) {
+		numCoin = 0;
 		units = new ArrayList<String>();
 		try {
 			name = (String) j.get("name");
@@ -28,6 +30,12 @@ public class Solution {
 			e.printStackTrace();
 		}
 	}
+	public int getNumCoin() {
+		return numCoin;
+	}
+	public void increaseNumCoin() {
+		numCoin++;
+	}
 
 	public String getName() {
 		return name;
@@ -35,5 +43,12 @@ public class Solution {
 
 	public ArrayList<String> getUnits() {
 		return units;
+	}
+	public boolean contains(String st) {
+		for(String str: units) {
+			if(str.equals(st))
+				return true;
+		}
+		return false;
 	}
 }

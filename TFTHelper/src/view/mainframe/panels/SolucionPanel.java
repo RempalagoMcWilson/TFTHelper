@@ -14,6 +14,7 @@ import view.mainframe.UnitIcon;
 
 public class SolucionPanel extends JPanel{
 
+	private static final long serialVersionUID = 1L;
 	private JLabel infoLabel;
 	private JLabel nombreLabel;
 	private JPanel panelIconos;
@@ -29,9 +30,9 @@ public class SolucionPanel extends JPanel{
 		this.setLayout(new BorderLayout());
 		infoLabel = new JLabel();
 		nombreLabel = new JLabel();
-		infoLabel.setText("En esta partida debe de jugar ");
+		infoLabel.setText(" In this match you should play ");
 		
-		nombreLabel.setText("" + s.getName());
+		nombreLabel.setText(" " + s.getName());
 		nombreLabel.setFont(new Font("",Font.BOLD, 20));
 		panelIconos =new JPanel();
 		panelLabels = new JPanel();
