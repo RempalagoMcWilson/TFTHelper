@@ -1,7 +1,7 @@
 package query;
 
 public interface Query {
-	String apiKey = "RGAPI-c123a456-5d2c-4136-b31c-26b8853015d3";
+	String apiKey = "RGAPI-bcbc1815-b3a1-4e3b-a945-879ee2164ef4";
 	String numPartidas = "10";
 
 	public Object doQuery(Object entrada);

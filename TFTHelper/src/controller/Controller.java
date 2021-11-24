@@ -19,6 +19,7 @@ import view.mainframe.MainFrame;
 public class Controller {
 	ArrayList<Summoner> summonersList;
 	ArrayList<Solution> solutionsList;
+	SolutionAnalyzer sAna;
 	
 	public Controller() {
 		solutionsList = new ArrayList<Solution>();
@@ -30,8 +31,15 @@ public class Controller {
 		for(String n: nombresSummoners) {
 			summonersList.add(new Summoner(n));
 		}
-		SolutionAnalyzer aux =  new SolutionAnalyzer(solutionsList,summonersList);
-		new MainFrame(aux.getBestSolution(),summonersList);
+		sAna =  new SolutionAnalyzer(solutionsList,summonersList);
+		new MainFrame(sAna.getBestSolution(),summonersList,this);
+	}
+	
+	public SolutionAnalyzer getSAna() {
+		return sAna;
+	}
+	public ArrayList<Solution> getSolutionsList(){
+		return solutionsList;
 	}
 
 	private void iniSolutionsList() {

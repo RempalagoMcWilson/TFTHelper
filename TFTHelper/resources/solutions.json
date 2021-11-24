@@ -28,6 +28,151 @@
 					"character_id": "TFT6_Akali"
 				}
 			]
+		},
+		{
+			"name": "Arcanists",
+			"units": [
+				{
+					"character_id": "TFT6_TwistedFate"
+				},
+				{
+					"character_id": "TFT6_Swain"
+				},
+				{
+					"character_id": "TFT6_Malzahar"
+				},
+				{
+					"character_id": "TFT6_Vex"
+				},
+				{
+					"character_id": "TFT6_Janna"
+				},
+				{
+					"character_id": "TFT6_Lux"
+				},
+				{
+					"character_id": "TFT6_Viktor"
+				},
+				{
+					"character_id": "TFT6_Yuumi"
+				}
+			]
+		},
+		{
+			"name": "Enchanter Snipers",
+			"units": [
+				{
+					"character_id": "TFT6_Caitlyn"
+				},
+				{
+					"character_id": "TFT6_Leona"
+				},
+				{
+					"character_id": "TFT6_Braum"
+				},
+				{
+					"character_id": "TFT6_Janna"
+				},
+				{
+					"character_id": "TFT6_Jhin"
+				},
+				{
+					"character_id": "TFT6_Orianna"
+				},
+				{
+					"character_id": "TFT6_Jayce"
+				},
+				{
+					"character_id": "TFT6_Yuumi"
+				}
+			]
+		},
+		{
+			"name": "Innovators",
+			"units": [
+				{
+					"character_id": "TFT6_Singed"
+				},
+				{
+					"character_id": "TFT6_Zilean"
+				},
+				{
+					"character_id": "TFT6_Heimerdinger"
+				},
+				{
+					"character_id": "TFT6_Taric"
+				},
+				{
+					"character_id": "TFT6_Janna"
+				},
+				{
+					"character_id": "TFT6_Orianna"
+				},
+				{
+					"character_id": "TFT6_Seraphine"
+				},
+				{
+					"character_id": "TFT6_Jayce"
+				}
+			]
+		},
+		{
+			"name": "Scrap Enforcers",
+			"units": [
+				{
+					"character_id": "TFT6_Vi"
+				},
+				{
+					"character_id": "TFT6_Janna"
+				},
+				{
+					"character_id": "TFT6_Jhin"
+				},
+				{
+					"character_id": "TFT6_Orianna"
+				},
+				{
+					"character_id": "TFT6_Jayce"
+				},
+				{
+					"character_id": "TFT6_Jinx"
+				},
+				{
+					"character_id": "TFT6_TahmKench"
+				},
+				{
+					"character_id": "TFT6_Yuumi"
+				}
+			]
+		},
+		{
+			"name": "Twinshot Bruisers",
+			"units": [
+				{
+					"character_id": "TFT6_Vi"
+				},
+				{
+					"character_id": "TFT6_Zac"
+				},
+				{
+					"character_id": "TFT6_DrMundo"
+				},
+				{
+					"character_id": "TFT6_Urgot"
+				},
+				{
+					"character_id": "TFT6_Jayce"
+				},
+				{
+					"character_id": "TFT6_Jinx"
+				},
+				{
+					"character_id": "TFT6_TahmKench"
+				},
+				{
+					"character_id": "TFT6_Yuumi"
+				}
+			]
 		}
 	]
 }
