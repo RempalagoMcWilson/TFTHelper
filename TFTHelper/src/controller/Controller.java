@@ -38,8 +38,8 @@ public class Controller {
 	public SolutionAnalyzer getSAna() {
 		return sAna;
 	}
-	public ArrayList<Solution> getSolutionsList(){
-		return solutionsList;
+	public Object[] getSolutionsPQ(){
+		return sAna.getPQ();
 	}
 
 	private void iniSolutionsList() {

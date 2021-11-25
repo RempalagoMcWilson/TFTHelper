@@ -14,21 +14,20 @@ public class AllSolutionsFrame extends JFrame{
 	private static final long serialVersionUID = 1L;
 	private ArrayList<SolucionPanelDetallado> sPA;
 	
-	public AllSolutionsFrame(ArrayList<Solution> solutionsList) {
-		iniGUI(solutionsList);
+	public AllSolutionsFrame(Object[] objects) {
+		iniGUI(objects);
 	}
 
-	private void iniGUI(ArrayList<Solution> solutionsList) {
+	private void iniGUI(Object[] objects) {
 		sPA = new ArrayList<SolucionPanelDetallado>();
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 		setMinimumSize(new Dimension(700,400));
 		setLayout (new BoxLayout(this.getContentPane(),BoxLayout.Y_AXIS));
-		for(Solution s : solutionsList) {
-			SolucionPanelDetallado aux = new SolucionPanelDetallado(s);
+		for(Object s : objects) {
+			SolucionPanelDetallado aux = new SolucionPanelDetallado((Solution)s);
 			sPA.add(aux);
 			add(aux);
 		}
-		
 		this.setVisible(true);
 		setLocationRelativeTo(null);
 		

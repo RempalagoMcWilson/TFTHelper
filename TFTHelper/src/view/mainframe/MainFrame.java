@@ -59,10 +59,10 @@ public class MainFrame extends JFrame{
 	}
 	
 	private void abrirTodasSolucionesListener() {
-		abrirTodasSoluciones.addActionListener(new ActionListener() {//Paco,lucia,mario,fRanCisco34,juanma,marcelo,Pepe
+		abrirTodasSoluciones.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
-            	new AllSolutionsFrame(ctrl.getSolutionsList());
+            	new AllSolutionsFrame(ctrl.getSolutionsPQ());
             }
         });
 	}

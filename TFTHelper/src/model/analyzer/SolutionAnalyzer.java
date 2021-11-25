@@ -43,6 +43,10 @@ public class SolutionAnalyzer {
 		
 	}
 	
+	public Object[] getPQ(){
+		return pQ.toArray();
+	}
+	
 	public Solution getBestSolution() {
 		return pQ.peek();
 	}
