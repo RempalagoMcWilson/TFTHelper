@@ -34,32 +34,35 @@ public class Summoner {
     	Query qM= new QueryMatch();
     	
     	JSONObject j = (JSONObject) qS.doQuery(name);
-    	try {
-    		accountId = (String) j.get("accountId");
-    		profileIconId = (long) j.get("profileIconId");
-    		revisionDate = (long) j.get("revisionDate");
-    		this.name = (String) j.get("name");
-    		id = (String) j.get("id");
-    		puuid = (String) j.get("puuid");
-    		summonerLevel = (long) j.get("summonerLevel");
-    	}catch(Exception e) {
-    		e.printStackTrace();
+    	if(j != null) {
+    		try {
+        		accountId = (String) j.get("accountId");
+        		profileIconId = (long) j.get("profileIconId");
+        		revisionDate = (long) j.get("revisionDate");
+        		this.name = (String) j.get("name");
+        		id = (String) j.get("id");
+        		puuid = (String) j.get("puuid");
+        		summonerLevel = (long) j.get("summonerLevel");
+        	}catch(Exception e) {
+        		e.printStackTrace();
+        	}
+        	
+        	JSONArray jA = (JSONArray) qL.doQuery(puuid);
+        	if(jA != null) {
+        		Iterator<String> iterator = jA.iterator();
+                while (iterator.hasNext()) {
+                	JSONObject jM = (JSONObject) qM.doQuery(iterator.next());
+                	if(jM != null)
+                		matchList.add(new Match(jM, puuid));
+                }
+        	}
     	}
+    	sA = new SummonerAnalyzer(this);
     	
-    	JSONArray jA = (JSONArray) qL.doQuery(puuid);
-    	
-    	Iterator<String> iterator = jA.iterator();
-        while (iterator.hasNext()) {
-        	JSONObject jM = (JSONObject) qM.doQuery(iterator.next());
-        	matchList.add(new Match(jM, puuid));
-        }
-        sA = new SummonerAnalyzer(this);
     }
 	@Override
 	public String toString() {
-		return sA.toString();/*"Summoner [matchList=" + matchList + ",\n accountId=" + accountId + ",\n profileIconId=" + profileIconId
-				+ ",\n revisionDate=" + revisionDate + ",\n name=" + name + ",\n id=" + id + ",\n puuid=" + puuid
-				+ ",\n summonerLevel=" + summonerLevel + "]";*/
+		return sA.toString();
 	}
 	public ArrayList<Match> getMatchList() {
 		return matchList;

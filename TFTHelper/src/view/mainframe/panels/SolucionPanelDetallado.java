@@ -57,15 +57,15 @@ public class SolucionPanelDetallado extends JPanel{
 		this.setVisible(true);
 	}
 	private void meteTextoInfoLabel(Solution s) {
-		if(s.getNumCoin() < 3) {
+		if(s.getNumCoin() < 5) {
 			infoLabel.setText(" MUY BUENO ");
 			infoLabel.setForeground(new Color(4, 194, 55));
 		}
-		else if(s.getNumCoin() < 6) {
+		else if(s.getNumCoin() < 10) {
 			infoLabel.setText(" BUENO ");
 			infoLabel.setForeground(new Color(245, 241, 34));
 		}
-		else if(s.getNumCoin() < 10) {
+		else if(s.getNumCoin() < 15) {
 			infoLabel.setText(" MEDIO ");
 			infoLabel.setForeground(new Color(255, 145, 0));
 		}

@@ -5,8 +5,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+
+import util.Util;
 
 public class QueryTFTSummoner implements Query {
 	
@@ -25,7 +29,7 @@ public class QueryTFTSummoner implements Query {
 			conn.connect();
 			int responsecode = conn.getResponseCode();
 			if (responsecode != 200) {
-				throw new RuntimeException("HttpResponseCode: " + responsecode);
+				throw new RuntimeException("" + responsecode);
 			} else {
 				String inline = "";
 				Scanner scanner = new Scanner(url.openStream());
@@ -38,8 +42,8 @@ public class QueryTFTSummoner implements Query {
 			}
 
 		} catch (Exception e) {
-			
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, Util.resCodeToText(e.getMessage()) + " Summoner name: " + name, "Error message", JOptionPane.ERROR_MESSAGE);
+			data_obj = null;
 		}
 		return data_obj;
 	}
